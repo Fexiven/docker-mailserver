@@ -39,8 +39,8 @@ This will create a unix socket locate under `/run/podman/podman.sock`, which is 
 
 ```bash
 export DOCKER_HOST="unix:///run/podman/podman.sock"
-docker compose up -d mailserver
-docker compose ps
+docker-compose up -d mailserver
+docker-compose ps
 ```
 
 You should see that docker-mailserver is running now.
@@ -92,8 +92,8 @@ Then, setup your `mailserver.env` file follow the documentation and use Docker C
 
 ```bash
 export DOCKER_HOST="unix:///var/run/user/$(id -u)/podman/podman.sock"
-docker compose up -d mailserver
-docker compose ps
+docker-compose up -d mailserver
+docker-compose ps
 ```
 
 ### Security in Rootless Mode
